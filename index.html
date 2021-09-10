@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo-container">
+      <img src="images/logo.svg" alt="">
+    </div>
+    <div class="calculator-container">
+      <div class="left-container">
+        <div class="left-bill">
+          <label class="label-left-container" for="billInput">Bill</label>
+          <input id="billInput" class="bill-input bill-input-bg" type="number" placeholder="0">
+        </div>
+        <div class="left-percentage">
+          <label class="label-left-container">Select Tip %</label>
+          <div class="percentage-inputs">
+            <input class="percentage-option" type="text" value="5%" readonly>
+            <input class="percentage-option" type="text" value="10%" readonly>
+            <input class="percentage-option" type="text" value="15%" readonly>
+            <input class="percentage-option" type="text" value="20%" readonly>
+            <input class="percentage-option" type="text" value="25%" readonly>
+            <input id="custom-percentage-input" class="custom-percentage-option" type="number" placeholder="CUSTOM">
+          </div>
+        </div>
+        <div class="left-peoplecount">
+          <div class="labels">
+            <label class="label-left-container" for="numberOfPeopleInput">Number of People</label>
+            <span class="left-span">Can't be Zero</span>
+          </div>
+          <input id="numberOfPeopleInput" class="people-input people-input-bg" type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="result-container">
+          <div class="tip-result-container">
+            <div class="right-span-container">
+              <span class="amount-span">Tip Amount</span>
+              <span class="person-span">/ person</span>
+            </div>
+            <div id="tipAmountDiv" class="tip-amount">
+              $0.00
+            </div>
+          </div>
+          <div class="total-result-container">
+            <div class="right-span-container">
+              <span class="amount-span">Total</span>
+              <span class="person-span">/ person</span>
+            </div>
+            <div id="totalAmountDiv" class="total-amount">
+              $0.00
+            </div>
+          </div>
+        </div>
+        <div class="reset-btn-container">
+          <button class="reset-btn">RESET</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="app.js"></script>
+
+</html>

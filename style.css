@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Space Mono", monospace;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+.logo-container {
+    margin: 180px auto 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-container {
+    width: 710px;
+    border-radius: 25px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+}
+
+.left-container {
+    width: 50%;
+    height: 100%;
+}
+
+.label-left-container {
+    color: hsl(186, 14%, 43%);
+    font-size: 12px;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.left-bill {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bill-input,
+.people-input {
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 24px;
+    padding: 0 6px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 6px, 50%;
+    text-align: right;
+    background-color: hsl(189, 41%, 97%);
+    cursor: pointer;
+}
+
+.bill-input-bg {
+    background-image: url("images/icon-dollar.svg");
+}
+
+.left-percentage {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.percentage-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100.75px;
+}
+
+.percentage-option {
+    width: 30%;
+    cursor: pointer;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    font-size: 24px;
+    background: hsl(183, 100%, 15%);
+    color: #fff;
+}
+
+.percentage-option:hover {
+    animation: bgeffect 0.095s forwards;
+    color: hsl(183, 100%, 15%);
+    background: hsl(185, 41%, 84%);
+}
+
+.custom-percentage-option {
+    width: 30%;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: hsl(189, 41%, 97%);
+}
+
+.custom-percentage-option:focus {
+    transition: 0.5s;
+    border: 2px solid rgb(48, 174, 179);
+}
+
+.left-peoplecount {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.labels {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-span {
+    display: none;
+    color: #ef6c00;
+    font-size: 12px;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 6px;
+    text-align: right;
+}
+
+.people-input-bg {
+    background-image: url("images/icon-person.svg");
+}
+
+.orange-border {
+    transition: 0.5s;
+    border: 2px solid #ef6c00;
+}
+
+.bill-input:focus,
+.people-input:focus {
+    transition: 0.5s;
+    border: 2px solid rgb(48, 174, 179);
+}
+
+.right-container {
+    width: 50%;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.result-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.tip-result-container,
+.total-result-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-result-container {
+    margin-top: 24px;
+}
+.right-span-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tip-amount,
+.total-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgba(63, 187, 191, 1);
+}
+
+.amount-span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.person-span {
+    font-size: 10px;
+    font-weight: 700;
+    color: hsl(184, 14%, 56%);
+}
+
+.reset-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.reset-btn {
+    width: 70%;
+    height: 40px;
+    background: rgba(63, 187, 191, 0.4);
+    color: hsl(183, 100%, 15%);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.reset-btn:hover {
+    animation: bgeffect 0.095s forwards;
+    color: hsl(183, 100%, 15%);
+    background: hsl(185, 41%, 84%);
+}
+
+.reset-btn:active {
+    transition: 0.5s;
+    border: 2px solid rgb(48, 174, 179);
+}
+
+.active {
+    background-color: rgba(63, 187, 191, 1);
+    color: hsl(183, 100%, 15%);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media (max-width: 740px) {
+    .logo-container {
+        margin: 20px auto 30px;
+        width: 350px;
+    }
+
+    .calculator-container {
+        width: 350px;
+        flex-wrap: wrap;
+    }
+
+    .left-container {
+        width: 100%;
+    }
+
+    .right-container {
+        width: 100%;
+    }
+
+    .percentage-inputs {
+        display: flex;
+        height: 146px;
+    }
+
+    .percentage-option,
+    .custom-percentage-option {
+        width: 47.5%;
+    }
+}
