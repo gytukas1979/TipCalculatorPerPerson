@@ -6,3 +6,5 @@ The users of this App can:
 - see all hover states for all interactive elements;
 - calculate the correct tip and total cost of the bill per person.
 
+You can visit this APP:
+https://tip-calculator-per-person-6ps6vurqv-gytukas1979.vercel.app/
